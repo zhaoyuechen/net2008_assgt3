@@ -29,7 +29,9 @@ def interfaces():
                 ipadds = re.compile(r'addr:(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
                 ipadds = re.findall(ipadds, line)
                 ipadd = ipadds[0]
+                # add ComputerInterfaces to d
                 d[name.split(" ")[0]] = ipadd
+        d = {"ComputerInterfaces": d}
     res = make_response(jsonify(d), 200)
     return res
 
