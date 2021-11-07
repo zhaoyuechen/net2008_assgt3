@@ -10,3 +10,8 @@ create net2008_assgt3
 # step3 create branch_100
 create branch_100
 
+# step4 
+create branch_101
+
+# step5
+create branch_102

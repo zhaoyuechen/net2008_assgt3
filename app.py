@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, jsonify, make_response
+import re
 
 app = Flask(__name__)
 
@@ -8,9 +9,16 @@ def home():
     return "Home Page"
 
 
+# @app.route('/interfaces')
+# def interfaces():
+#     return 'interfaces reached'
+
+
 @app.route('/interfaces')
 def interfaces():
-    return 'interfaces reached'
+    d={}
+    res = make_response(jsonify(d), 200)
+    return res
 
 
 if __name__ == '__main__':
